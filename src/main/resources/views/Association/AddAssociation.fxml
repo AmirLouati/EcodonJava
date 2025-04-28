@@ -1,0 +1,40 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.Controllers.Association.AddAssociationController"
+      spacing="20" styleClass="form-container" alignment="CENTER" stylesheets="@Style.css">
+    <!-- Title -->
+    <Label text="Add Association" styleClass="header-title" VBox.vgrow="NEVER" />
+
+    <!-- Form Container -->
+    <GridPane hgap="10" vgap="10"  styleClass="form-grid" VBox.vgrow="NEVER">
+        <!-- Name Field -->
+        <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label" />
+        <TextField fx:id="nameField" promptText="Enter association name" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="form-field" />
+        <Label fx:id="nameValidationMessage" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="validation-message" />
+
+        <!-- Description Field -->
+        <Label text="Description:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="form-label" />
+        <TextField fx:id="descriptionField" promptText="Enter description" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="form-field" />
+        <Label fx:id="descriptionValidationMessage" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="validation-message" />
+
+        <!-- Logo Field -->
+        <Label text="Logo:" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="form-label" />
+        <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER_LEFT">
+            <ImageView fx:id="logoImageView" fitWidth="50" fitHeight="50" preserveRatio="true" style="-fx-border-color: #ddd; -fx-border-radius: 5px;" />
+            <Button text="Upload Image" onAction="#handleUploadImage" styleClass="upload-btn" />
+        </HBox>
+    </GridPane>
+
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER" VBox.vgrow="NEVER">
+        <Button text="Save" onAction="#handleSave" styleClass="action-btn" />
+        <Button text="Cancel" onAction="#handleCancel" styleClass="cancel-btn" />
+    </HBox>
+</VBox>

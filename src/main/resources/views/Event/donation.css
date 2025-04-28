@@ -1,0 +1,79 @@
+/* Root Styling */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: white;
+}
+
+/* Label Styles */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #34495e;
+}
+
+.label-bold-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* TextField & TextArea */
+.text-field, .text-area, .combo-box {
+    -fx-background-color: #f7f9fa;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-area {
+    -fx-padding: 8px;
+}
+
+/* ComboBox Dropdown */
+.combo-box .list-cell {
+    -fx-padding: 8px;
+}
+
+/* Buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+#donateButton {
+    -fx-background-color: linear-gradient(to right, #27ae60, #2ecc71);
+    -fx-text-fill: white;
+}
+
+#donateButton:hover {
+    -fx-background-color: linear-gradient(to right, #229954, #27ae60);
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+.button:pressed {
+    -fx-translate-y: 1;
+}
+
+/* ScrollPane Styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* VBox Padding */
+.vbox {
+    -fx-padding: 30;
+}
+
+/* Grid Styling */
+.grid-pane {
+    -fx-padding: 10 0 0 0;
+}
