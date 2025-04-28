@@ -1,0 +1,57 @@
+.ajouter-container {
+    -fx-background-color: #F9F9F9;
+    -fx-padding: 30;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 5, 5);
+}
+
+.text-field, .date-picker {
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-border-color: #DDD;
+    -fx-border-radius: 8;
+    -fx-pref-width: 300;
+}
+
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+    -fx-padding: 10 0 20 0;
+}
+
+.choose-btn {
+    -fx-background-color: #BDC3C7;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-pref-width: 300;
+}
+
+.submit-btn {
+    -fx-background-color: #2ECC71;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-pref-width: 300;
+}
+.combo-box {
+    -fx-pref-width: 300;
+    -fx-font-size: 14px;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.combo-box-popup .list-view {
+    -fx-pref-width: 300;
+}
+
+.combo-box-popup .list-cell {
+    -fx-padding: 5px;
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #f0f0f0;
+}

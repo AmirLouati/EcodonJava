@@ -1,0 +1,252 @@
+/* Modern Color Palette */
+.root {
+    -fx-primary-green: #2E8B57;       /* Sea Green */
+    -fx-dark-green: #1F6B4A;          /* Darker green for accents */
+    -fx-light-green: #E8F5E9;         /* Very light green for backgrounds */
+    -fx-accent-green: #4CAF50;        /* Brighter green for highlights */
+    -fx-white: #FFFFFF;
+    -fx-light-gray: #F5F5F5;
+    -fx-medium-gray: #E0E0E0;
+    -fx-dark-gray: #333333;
+    -fx-danger-red: #E53935;
+}
+/* ========== SIDEBAR STYLING ========== */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #2E8B57, #1F6B4A);
+    -fx-padding: 20px 15px;
+    -fx-alignment: TOP_CENTER;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 2, 0);
+}
+
+/* Logo and Title Container */
+.logo-title-container {
+    -fx-padding: 0 0 20px 0;
+    -fx-border-color: rgba(255,255,255,0.2);
+    -fx-border-width: 0 0 1px 0;
+}
+
+.project-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    -fx-padding: 15px 0;
+    -fx-spacing: 5px;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 0;
+    -fx-graphic-text-gap: 15px;
+    -fx-content-display: left;
+}
+
+.nav-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+}
+
+.nav-btn.active {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-insets: 0 0 0 -3px;
+    -fx-padding: 12px 15px 12px 12px;
+}
+
+.nav-btn .image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 1, 1);
+}
+
+/* Logo Styling */
+.sidebar .image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+/* Navigation Menu */
+.nav-menu {
+    -fx-padding: 30px 0;
+    -fx-spacing: 8px;
+}
+
+.nav-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Active Navigation Button Styling */
+.nav-btn.active {
+    -fx-background-color: -fx-dark-green;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-text-fill: -fx-white;
+    -fx-font-weight: bold;
+    -fx-border-color: rgba(255,255,255,0.3);
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-insets: 0 0 0 -3px;
+    -fx-padding: 12px 15px 12px 12px; /* Adjust padding for border */
+    -fx-background-insets: 0;
+    -fx-cursor: hand;
+}
+
+/* Animation for active state */
+.nav-btn.active:hover {
+    -fx-background-color: derive(-fx-dark-green, -10%);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 7, 0, 0, 3);
+}
+
+/* Icon styling for active button (if you add icons later) */
+.nav-btn.active > .ikonli-font-icon {
+    -fx-icon-color: -fx-white;
+    -fx-icon-size: 18px;
+}
+
+.nav-btn.active {
+    -fx-translate-x: 5px;
+}
+
+/* User Profile Section */
+.user-profile {
+    -fx-alignment: CENTER;
+    -fx-padding: 25px 0 15px 0;
+    -fx-spacing: 8px;
+    -fx-border-color: rgba(255,255,255,0.2);
+    -fx-border-width: 1px 0 0 0;
+}
+
+.profile-img {
+    -fx-border-radius: 50%;
+    -fx-border-color: -fx-white;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+/* User Role Label */
+.user-role {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 5px 15px;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Admin Controls */
+.admin-controls {
+    -fx-spacing: 15px;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.logout-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-white;
+    -fx-border-color: -fx-white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15px;
+    -fx-padding: 5px 20px;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.logout-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Content Area - Modern Card Layout */
+.content-container {
+    -fx-padding: 25px;
+    -fx-background-color: -fx-light-green;
+    -fx-spacing: 20px;
+}
+
+/* Header Section */
+.header {
+    -fx-padding: 0 0 15px 0;
+}
+
+.header-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-dark-gray;
+}
+
+/* Toolbar with Search and Filters */
+.toolbar {
+    -fx-padding: 0 0 20px 0;
+    -fx-spacing: 15px;
+}
+
+
+/* Ensure table fits in container */
+.content-container {
+    -fx-padding: 20px;
+}
+
+/* 📚 Title Label */
+.title-label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50; /* Dark blue-gray */
+}
+
+
+/* 📄 Publication List */
+.publication-list {
+    -fx-background-color: white;
+    -fx-border-color: #28A745;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 5);
+}
+
+/* 🗂️ Dynamic Publication Container */
+.publication-container {
+    -fx-spacing: 15px;
+    -fx-background-color: #F8F9FA;
+    -fx-padding: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #28A745;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 10, 0, 0, 5);
+}
+
+.back-btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 20px;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+}
+
+.back-btn:hover {
+    -fx-background-color: #2980B9;
+}
+
+/* ➕ Add Button */
+.add-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 8px 20px;
+    -fx-border-radius: 15px;
+    -fx-cursor: hand;
+}
+
+.add-button:hover {
+    -fx-background-color: #45A049;
+    -fx-translate-y: -2px; /* Lift effect */
+}

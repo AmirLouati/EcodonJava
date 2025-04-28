@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="683.0" prefWidth="967.0" stylesheets="@/views/home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.Controllers.Association.ListAssociation">
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox prefWidth="220" spacing="20" styleClass="sidebar">
+            <!-- Logo and Title Container -->
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="logo-title-container">
+                <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                    <image>
+                        <Image url="@/Images/ecodon.png" />
+                    </image>
+                </ImageView>
+                <Label styleClass="project-title" text="Ecodon" />
+            </HBox>
+            <!-- Navigation Menu -->
+            <VBox spacing="8" styleClass="nav-menu">
+                <Button styleClass="nav-btn" text="Profil">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/profile.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="nav-btn" text="Dashboard">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/dashboard.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="nav-btn" text="Blog">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/blog.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="nav-btn" text="Formation">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/study.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="nav-btn" text="Produits">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/product.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="nav-btn" text="Association">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/association.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+            <!-- User Profile Section -->
+            <VBox spacing="10" styleClass="user-profile">
+                <ImageView fitHeight="60" fitWidth="60" styleClass="profile-img">
+                    <image>
+                        <Image url="@/Images/icons/profile.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="userRoleLabel" styleClass="user-role" text="ADMIN" />
+                <Button styleClass="logout-btn" text="Logout">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <image>
+                                <Image url="@/Images/icons/LOGOUT.gif" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Center Content (Posts Management) -->
+    <center>
+        <VBox spacing="20" styleClass="content-container">
+            <!-- Header -->
+            <HBox alignment="CENTER_LEFT" styleClass="header">
+                <Label styleClass="header-title" text="Welcome To Ecodon" />
+                <Region HBox.hgrow="ALWAYS" />
+            </HBox>
+
+            <!-- Search and Filter -->
+            <HBox spacing="15" styleClass="toolbar">
+            <children>
+               <TextField fx:id="SearchText" onAction="#handleSearch" prefHeight="25.0" prefWidth="254.0" />
+               <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#handleSearch" text="SEARCH" />
+            </children></HBox>
+
+            <!-- TableView for Associations -->
+            <TableView fx:id="associationTable" prefHeight="480.0" prefWidth="960.0" styleClass="publication-table">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="200" text="Name" />
+                    <TableColumn fx:id="descriptionColumn" prefWidth="300" text="Description" />
+                    <TableColumn fx:id="logoColumn" prefWidth="200" text="Logo" />
+                </columns>
+            </TableView>
+            <HBox fx:id="adminControls" spacing="15">
+                <Button onAction="#handleAddButton" styleClass="action-btn" text="Add" />
+                <Button onAction="#handleUpdateButton" styleClass="action-btn" text="Update" />
+                <Button onAction="#handleDeleteButton" styleClass="action-btn" text="Delete" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

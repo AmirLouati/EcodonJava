@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="tn.esprit.Controllers.Event.EventDetailController"
+            prefWidth="400" prefHeight="400" style="-fx-background-color: white; -fx-background-radius: 15;">
+<VBox alignment="TOP_CENTER" spacing="10" layoutX="10" layoutY="10" prefWidth="380" prefHeight="380" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+    <ImageView fx:id="eventImage" fitHeight="180" fitWidth="360" preserveRatio="true"
+               style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 3, 3);"/>
+
+    <Label fx:id="eventName" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" wrapText="true"/>
+
+    <Label fx:id="eventType" style="-fx-background-color: #8E44AD; -fx-text-fill: white; -fx-padding: 4px 8px; -fx-background-radius: 10px;" />
+
+    <Label fx:id="eventDate" style="-fx-text-fill: #555555;" />
+
+    <Label fx:id="eventPrice" style="-fx-text-fill: #27ae60;" />
+
+    <Label fx:id="eventLocation" style="-fx-text-fill: #555555;" />
+
+    <Button text="Close" onAction="#closePopup"
+            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 10px;"/>
+</VBox>
+</AnchorPane>

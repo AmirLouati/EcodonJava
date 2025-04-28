@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tn.esprit.Controllers.Formation.UpdateFormationController"
+            prefHeight="500.0" prefWidth="600.0" stylesheets="@Add.css">
+
+    <!-- Title Label -->
+    <Label text="Update Formation" styleClass="title-label"
+           AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"/>
+
+    <!-- VBox for Form Fields -->
+    <VBox spacing="15" AnchorPane.topAnchor="60.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <!-- Titre Field -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Title:" styleClass="label.prefix"/>
+            <TextField fx:id="titreField" prefWidth="400"/>
+        </HBox>
+        <Label fx:id="titreMessage" text="" styleClass="validation-message"/>
+
+        <!-- Description Field -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Description:" styleClass="label.prefix"/>
+            <TextField fx:id="descriptionField" prefWidth="400"/>
+        </HBox>
+        <Label fx:id="descriptionMessage" text="" styleClass="validation-message"/>
+
+        <!-- Formateur Field -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Formateur:" styleClass="label.prefix"/>
+            <TextField fx:id="formateurField" prefWidth="400"/>
+        </HBox>
+        <Label fx:id="formateurMessage" text="" styleClass="validation-message"/>
+
+        <!-- Date de début Field -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Date de début:" styleClass="label.prefix"/>
+            <DatePicker fx:id="dateDebutPicker" prefWidth="400"/>
+        </HBox>
+        <Label fx:id="dateMessage" text="" styleClass="validation-message"/>
+
+        <!-- Buttons -->
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Cancel" onAction="#handleCancel" styleClass="btn-secondary"/>
+            <Button text="Save" onAction="#handleSave" styleClass="btn-primary"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,110 @@
+/* General Styles */
+.form-container {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 30px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.header-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* GridPane Styles */
+.form-grid {
+    -fx-background-color: white;
+    -fx-border-radius: 8px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 0);
+}
+
+/* Label Styles */
+.form-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+/* TextField Styles */
+.form-field {
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-background-color: #fff;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 5, 0, 0, 0);
+}
+
+.form-field:hover {
+    -fx-border-color: #bbb;
+}
+
+/* Button Styles */
+.action-btn {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.action-btn:hover {
+    -fx-background-color: #005fa3;
+}
+
+.cancel-btn {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.cancel-btn:hover {
+    -fx-background-color: #d32f2f;
+}
+/* ImageView Styles */
+#logoImageView {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+}
+
+/* Upload Button Styles */
+.upload-btn {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.upload-btn:hover {
+    -fx-background-color: #005fa3;
+}
+/* Validation Messages */
+.validation-message {
+    -fx-font-size: 12px;
+    -fx-text-fill: red;
+}
+
+.validation-message.success {
+    -fx-text-fill: green;
+}
+
+/* Invalid Input Fields */
+.form-field.invalid {
+    -fx-border-color: red;
+    -fx-border-radius: 5px;
+}
+
+.form-field.valid {
+    -fx-border-color: green;
+    -fx-border-radius: 5px;
+}

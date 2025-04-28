@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="tn.esprit.Controllers.ChatbotController" prefWidth="600.0" prefHeight="600.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e6f7ff);">
+
+    <!-- Main Chat Container -->
+    <VBox alignment="CENTER" spacing="15" layoutX="20" layoutY="20" prefWidth="560" prefHeight="560">
+
+        <!-- Chatbot Header -->
+        <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #0078D7; -fx-padding: 10; -fx-background-radius: 15;">
+            <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                <image>
+                    <Image url="@/Images/chatbot.gif" />
+                </image>
+            </ImageView>
+            <Label text="Smart Chatbot" style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;" />
+        </HBox>
+
+        <!-- Chat Display Area -->
+        <TextArea fx:id="chatArea" editable="false" wrapText="true" prefHeight="400" prefWidth="560"
+                  style="-fx-font-size: 14px; -fx-control-inner-background: #F8F9FA; -fx-background-radius: 15; -fx-padding: 10;"/>
+
+        <!-- Input Area -->
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="userInputField" promptText="Type your message..." prefWidth="420"
+                       style="-fx-font-size: 14px; -fx-background-color: #ffffff; -fx-border-color: #0078D7; -fx-border-radius: 10; -fx-padding: 8;" />
+
+            <!-- Send Button -->
+            <Button onAction="#sendMessage" text="📤 Send" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10; -fx-padding: 8 20;"/>
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

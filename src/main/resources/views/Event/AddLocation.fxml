@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.sothawo.mapjfx.MapView?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="tn.esprit.Controllers.Event.AddLocationController"
+      spacing="20" styleClass="location-form"
+      stylesheets="@location-styles.css"
+      prefHeight="600.0" prefWidth="800.0">
+
+    <Label text="Add New Location" styleClass="form-title"/>
+
+    <HBox spacing="20">
+        <!-- Map View -->
+        <VBox spacing="10" styleClass="map-container">
+            <Label text="Select Location on Map" styleClass="section-title"/>
+            <MapView fx:id="mapView" prefHeight="400" prefWidth="500"/>
+            <Label text="Click on the map to select a location" styleClass="instruction-text"/>
+        </VBox>
+
+        <!-- Location Details Form -->
+        <VBox spacing="15" styleClass="form-fields">
+            <Label text="Location Details" styleClass="section-title"/>
+
+            <TextField fx:id="nameField" promptText="Location Name" styleClass="form-field"/>
+            <TextField fx:id="countryField" promptText="Country" styleClass="form-field" editable="false"/>
+
+            <HBox spacing="10">
+                <TextField fx:id="latField" promptText="Latitude" styleClass="coord-field" editable="false"/>
+                <TextField fx:id="longField" promptText="Longitude" styleClass="coord-field" editable="false"/>
+            </HBox>
+
+            <Button text="Save Location" onAction="#handleSaveLocation" styleClass="save-button"/>
+            <Button text="Cancel" onAction="#handleCancel" styleClass="cancel-button"/>
+        </VBox>
+    </HBox>
+</VBox>
